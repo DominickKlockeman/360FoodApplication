@@ -1,5 +1,6 @@
 package com.example.dominickklockeman.a360foodapp;
 
+//import android.content.Intent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -85,6 +86,10 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_account) {
 
+        } else if(id == R.id.nav_sign_out) {
+            Intent signOutIntent = new Intent(MainActivity.this,
+                    LoginActivity.class);
+            startActivity(signOutIntent);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
