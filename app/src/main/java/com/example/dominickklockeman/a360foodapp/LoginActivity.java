@@ -102,6 +102,16 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
+        TextView mGuestContinue = findViewById(R.id.guest_continue_text);
+        mGuestContinue.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent guestContinueIntent = new Intent(LoginActivity.this,
+                        MainActivity.class);
+                startActivity(guestContinueIntent);
+            }
+        });
+
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
