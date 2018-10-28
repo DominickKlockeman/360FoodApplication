@@ -180,14 +180,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
 
         // Check for a valid email address.
-        if (TextUtils.isEmpty(email)) {
-            mEmailView.setError(getString(R.string.error_field_required));
-            focusView = mEmailView;
-            cancel = true;
-        } else if (!isEmailValid(email)) {
+         if (!isEmailValid(email)) {
             mEmailView.setError(getString(R.string.error_invalid_email));
             focusView = mEmailView;
             cancel = true;
+        } if (TextUtils.isEmpty(email)) {
+            mEmailView.setError("This field is required");
         }
 
         if (cancel) {
@@ -218,16 +216,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * @return boolean if the password contains some number.
      */
     private static boolean hasNumber(String thePassword) {
-        boolean result = false;
-        int index = 0;
-        char[] charArray = thePassword.toCharArray();
-        while (!result && index < charArray.length) {
-            if (Character.isDigit(charArray[index])) {
-                result = true;
+        for (int i = 0; i < thePassword.length(); i++) {
+            if (Character.isDigit(thePassword.charAt(i))) {
+                return true;
             }
-            index++;
         }
-        return result;
+        return false;
     }
     /**
      * Shows the progress UI and hides the login form.
