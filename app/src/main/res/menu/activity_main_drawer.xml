@@ -12,6 +12,10 @@
             android:id="@+id/nav_account"
             android:icon="@android:drawable/radiobutton_off_background"
             android:title="@string/activity_drawer_account" />
+        <item
+            android:id="@+id/nav_sign_out"
+            android:icon="@android:drawable/radiobutton_off_background"
+            android:title="@string/activity_drawer_sign_out" />
     </group>
 
 </menu>
