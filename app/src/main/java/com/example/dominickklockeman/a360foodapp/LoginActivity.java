@@ -164,6 +164,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         // Check for a valid password, if the user entered one.
         if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
             mPasswordView.setError(getString(R.string.error_invalid_password));
+            if (!hasNumber(password)) {
+                mPasswordView.setError("Passwords needs at least one number (0-9)");
+            }
             focusView = mPasswordView;
             cancel = true;
         }
