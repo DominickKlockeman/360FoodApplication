@@ -93,6 +93,16 @@ public class CreateAccountActivity extends AppCompatActivity implements LoaderCa
             }
         });
 
+        Button mCancelCreateAccButton = findViewById(R.id.cancel_create_acc_button);
+        mCancelCreateAccButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent cancelCreateAccIntent = new Intent(CreateAccountActivity.this,
+                        LoginActivity.class);
+                startActivity(cancelCreateAccIntent);
+            }
+        });
+
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }

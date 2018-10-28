@@ -12,6 +12,8 @@
     <string name="action_search">Search</string>
     <string name="title_activity_create_account">Create Account</string>
     <string name="no_account">Don\'t have an account?</string>
+    <string name="have_account">Have an account?</string>
+    <!--<string name="action_cancel">Cancel</string>-->
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
