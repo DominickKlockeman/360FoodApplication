@@ -164,6 +164,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         // Check for a valid password, if the user entered one.
         if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
             mPasswordView.setError(getString(R.string.error_invalid_password));
+            if (!hasNumber(password)) {
+                mPasswordView.setError("Passwords needs at least one number (0-9)");
+            }
             focusView = mPasswordView;
             cancel = true;
         }
@@ -192,16 +195,32 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
 
-    private boolean isEmailValid(String email) {
-        //TODO: Replace this with your own logic
-        return email.contains("@");
+    protected static boolean isEmailValid(String email) {
+        return email.contains("@") && email.contains(".")
+               && email.length() > 2;
     }
 
-    private boolean isPasswordValid(String password) {
-        //TODO: Replace this with your own logic
-        return password.length() > 4;
+    protected static boolean isPasswordValid(String password) {
+        return password.length() > 4 && hasNumber(password);
     }
 
+    /**
+     * Checks if the user entered password contains a numerical value.
+     * @param thePassword represents user entered password.
+     * @return boolean if the password contains some number.
+     */
+    private static boolean hasNumber(String thePassword) {
+        boolean result = false;
+        int index = 0;
+        char[] charArray = thePassword.toCharArray();
+        while (!result && index < charArray.length) {
+            if (Character.isDigit(charArray[index])) {
+                result = true;
+            }
+            index++;
+        }
+        return result;
+    }
     /**
      * Shows the progress UI and hides the login form.
      */
