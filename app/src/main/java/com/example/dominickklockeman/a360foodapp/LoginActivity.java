@@ -96,7 +96,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mCreateAccountButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.activity_create_account);
+                Intent createAccountIntent = new Intent(LoginActivity.this,
+                        CreateAccountActivity.class);
+                startActivity(createAccountIntent);
             }
         });
 
