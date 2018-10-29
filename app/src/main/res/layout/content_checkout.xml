@@ -8,9 +8,100 @@
     tools:context=".CheckoutActivity"
     tools:showIn="@layout/activity_checkout">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"/>
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/checkout_restaurant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="This is where restaurant name and location will go"
+            android:layout_margin="@dimen/text_margin"/>
+
+        <TextView
+            android:id="@+id/checkout_est_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="This is where estimated time of delivery will go/pickup instructions"
+            android:layout_margin="@dimen/text_margin"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="@+id/checkout_destination"
+            app:layout_constraintTop_toBottomOf="@+id/checkout_destination">
+
+            <ImageView
+                android:id="@+id/checkout_maps_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginLeft="48dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+            <TextView
+                android:id="@+id/checkout_destination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Destination"
+                app:layout_constraintStart_toStartOf="@id/checkout_destination_address"
+                app:layout_constraintTop_toBottomOf="@id/checkout_destination_address" />
+
+            <TextView
+                android:id="@+id/checkout_destination_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="116dp"
+                android:layout_marginRight="116dp"
+                android:text="Address of Destination"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/checkout_note_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginRight="9dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/checkout_note"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_pencil_black" />
+
+            <EditText
+                android:id="@+id/checkout_note"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="This is where special requests will go"
+                android:inputType="textMultiLine"
+                android:maxLength="106"
+                android:maxLines="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/checkout_note_image"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
 
 </android.support.v4.widget.NestedScrollView>
