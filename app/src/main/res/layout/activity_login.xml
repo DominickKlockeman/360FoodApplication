@@ -77,12 +77,12 @@
                 android:id="@+id/no_account_message"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="none"
-                android:focusable="false"
-                android:clickable="false"
-                android:gravity="center"
                 android:layout_marginTop="16dp"
+                android:clickable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:gravity="center"
+                android:inputType="none"
                 android:text="@string/no_account" />
 
             <Button
@@ -91,7 +91,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/title_activity_create_account"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/guest_continue_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/guest_continue"
+                android:textColor="@color/colorLink"
+                android:clickable="true"
+                android:focusable="true"
+                android:ems="10"
+                android:layout_marginTop="16dp"
+                android:inputType="none"
+                android:gravity="center"/>
 
         </LinearLayout>
     </ScrollView>

@@ -9,10 +9,11 @@
     <string name="activity_drawer_sign_out">Sign Out</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="action_search">Search</string>
+    <!--<string name="action_search">Search</string>-->
     <string name="title_activity_create_account">Create Account</string>
     <string name="no_account">Don\'t have an account?</string>
     <string name="have_account">Have an account?</string>
+    <string name="guest_continue">Continue as guest</string>
     <!--<string name="action_cancel">Cancel</string>-->
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -24,7 +25,9 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
+    <string name="title_checkout">Checkout</string>
+
     <!--<string name="permission_rationale">"Contacts permissions are needed for providing email-->
-        <!--completions."-->
+    <!--completions."-->
     <!--</string>-->
 </resources>
