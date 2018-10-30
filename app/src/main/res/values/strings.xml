@@ -10,6 +10,7 @@
     <!-- Strings related to drawer layout in main -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="activity_drawer_location">Location</string>
     <string name="activity_drawer_restaurants">Restaurants</string>
     <string name="activity_drawer_account">Account</string>
     <string name="activity_drawer_sign_out">Sign Out</string>
@@ -35,5 +36,15 @@
 
     <!-- Strings related to checkout -->
     <string name="checkout_title">Checkout</string>
+    <string name="checkout_map_desc">Shows the map location for delivery</string>
+    <string name="checkout_request_desc">The pencil icon for special requests</string>
+    <string name="checkout_subtotal">Subtotal</string>
+    <string name="checkout_tax">Tax</string>
+    <string name="checkout_delivery_fee">Delivery Fee</string>
+    <string name="checkout_total">Total</string>
+    <string name="checkout_cancel">Cancel Checkout</string>
+    <string name="checkout_begin">Begin Checkout</string>
+
+
 
 </resources>

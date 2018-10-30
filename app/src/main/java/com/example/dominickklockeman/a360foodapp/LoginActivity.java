@@ -213,12 +213,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
 
-    protected static boolean isEmailValid(String email) {
+    static boolean isEmailValid(String email) {
         return email.contains("@") && email.contains(".")
                && email.length() > 2;
     }
 
-    protected static boolean isPasswordValid(String password) {
+    static boolean isPasswordValid(String password) {
         return password.length() > 4 && hasNumber(password);
     }
 
@@ -348,7 +348,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * Represents an asynchronous login/registration task used to authenticate
      * the user.
      */
-    public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
+    class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
         private final String mEmail;
         private final String mPassword;

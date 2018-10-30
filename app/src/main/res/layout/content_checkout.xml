@@ -42,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
                 android:layout_marginLeft="48dp"
+                android:contentDescription="@string/checkout_map_desc"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@android:drawable/sym_def_app_icon" />
@@ -78,6 +79,7 @@
                 android:layout_marginLeft="7dp"
                 android:layout_marginEnd="9dp"
                 android:layout_marginRight="9dp"
+                android:contentDescription="@string/checkout_request_desc"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/checkout_note"
                 app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +93,7 @@
                 android:layout_marginEnd="5dp"
                 android:layout_marginRight="5dp"
                 android:ems="10"
-                android:gravity="top|left"
+                android:gravity="top|start"
                 android:hint="This is where special requests will go"
                 android:inputType="textMultiLine"
                 android:maxLength="106"
@@ -122,14 +124,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Subtotal" />
+                    android:text="@string/checkout_subtotal" />
 
                 <TextView
                     android:id="@+id/checkout_subtotal_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:text="$subtotal" />
             </LinearLayout>
 
@@ -143,14 +145,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Tax" />
+                    android:text="@string/checkout_tax" />
 
                 <TextView
                     android:id="@+id/checkout_tax_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:text="$tax" />
             </LinearLayout>
 
@@ -164,14 +166,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Delivery Fee" />
+                    android:text="@string/checkout_delivery_fee" />
 
                 <TextView
                     android:id="@+id/checkout_fee_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:text="$fee" />
             </LinearLayout>
 
@@ -185,14 +187,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Total" />
+                    android:text="@string/checkout_total" />
 
                 <TextView
                     android:id="@+id/checkout_total_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:text="%Total" />
             </LinearLayout>
         </LinearLayout>
@@ -208,7 +210,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#f9152f"
-                android:text="Cancel Checkout" />
+                style = "?android:attr/buttonBarButtonStyle"
+                android:text="@string/checkout_cancel" />
 
             <Button
                 android:id="@+id/checkout_begin_button"
@@ -216,7 +219,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#33a532"
-                android:text="Begin Checkout" />
+                style = "?android:attr/buttonBarButtonStyle"
+                android:text="@string/checkout_begin" />
         </LinearLayout>
 
     </LinearLayout>
